@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    <app-main (reserve)="handleSubmit($event)"></app-main>
+  <div class="row mt-3">
+    <app-reservation
+      *ngFor="let reservation of reservationList; index as i"
+      [reservation]="reservation"
+      [index]="i"
+      (remove)="handleRemove($event)"
+    ></app-reservation>
+  </div>
+</div>
